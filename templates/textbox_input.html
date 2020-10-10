@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Max 128 characters</h1>
+
+<form method="POST">
+    <input name="text"/>
+    <input type="submit"/>
+</form>
+
+<textarea id="output" disabled style="overflow:auto;resize:none"></textarea>
+
+<script>
+    let text = {{data|tojson}}
+    console.log(text)
+    document.getElementById("output").value = text.text
+</script>
+
+</body>
+</html>
