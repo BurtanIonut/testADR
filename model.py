@@ -7,7 +7,7 @@ from tensorflow import keras
 
 tf.config.experimental.set_visible_devices([], 'GPU')
 
-model_path = "models\cnn_fix1"
+model_path = "models/cnn_fix1"
 # Characters to be used
 all_characters = [' ', '\t', '\n', '-', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                   'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'â', 'î', 'ă', 'ș', 'ț']
