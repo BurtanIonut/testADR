@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def form_input():
-    return render_template("textbox_input.html")
+    return render_template("textbox_input.html", data={"text": ""})
 
 
 @app.route('/', methods=['POST'])
