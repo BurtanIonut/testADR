@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import model
 
 app = Flask(__name__)
 
@@ -11,8 +12,11 @@ def form_input():
 @app.route('/', methods=['POST'])
 def form_input_post():
     text = request.form['text']
-    print(text)
-    return render_template("textbox_input.html", data={"text": text})
+    response = ""
+    if text != "":
+        response = model.predict_text(text)
+        print(response)
+    return render_template("textbox_input.html", data={"text": response})
 
 
 if __name__ == '__main__':
